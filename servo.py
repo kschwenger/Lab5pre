@@ -17,13 +17,18 @@ dcMax = 13
 
 pwm = GPIO.PWM(pwmPin, 50) # PWM object at 50 Hz (20 ms period)
 pwm.start(0)
+t = 0.2
 
 try:
   while True:
     for dc in range(dcMin,dcMax):
       pwm.ChangeDutyCycle(dc)
       print(dc)
-      time.sleep(0.02)
+      time.sleep(t)
+    for dc in range(dcMax, dcMin, -1):
+      pwmChangeDutyCycle(dc)
+      print(dc)
+      time.sleep(t)
 
 except KeyboardInterrupt:
   print("bye")
