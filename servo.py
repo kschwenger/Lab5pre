@@ -26,7 +26,7 @@ try:
       print(dc)
       time.sleep(t)
     for dc in range(dcMax, dcMin, -1):
-      pwmChangeDutyCycle(dc)
+      pwm.ChangeDutyCycle(dc)
       print(dc)
       time.sleep(t)
 
