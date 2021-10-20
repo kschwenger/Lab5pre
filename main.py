@@ -4,6 +4,7 @@ from time import sleep
 dcmotor = 13
 
 GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
 GPIO.setup(dcmotor, GPIO.OUT)
 
 pwm = GPIO.PWM(dcmotor, 100)
