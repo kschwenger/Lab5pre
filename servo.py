@@ -17,7 +17,7 @@ dcMax = 13
 
 pwm = GPIO.PWM(pwmPin, 50) # PWM object at 50 Hz (20 ms period)
 pwm.start(0)
-t = 0.05
+t = 0.025
 
 try:
   while True:
