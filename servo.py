@@ -7,7 +7,7 @@ import RPi.GPIO as GPIO
 import time
 
 GPIO.setmode(GPIO.BCM)
-pwmPin = 24
+pwmPin = 18
 GPIO.setup(pwmPin, GPIO.OUT)
 # set min & max % duty cycles (5 and 10 are default values, but play
 # around to find optimum values for your motor)
